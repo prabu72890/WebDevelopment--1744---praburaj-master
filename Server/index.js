@@ -16,12 +16,12 @@ app.use(cors()); // enabling cors to allow requests to come inside the server
 const db = monk("localhost/amdtdb"); // db to connect to
 const dbtestimonials = db.get("testimonials"); // from db get me the collection (table) called 'features'
 
-app.get("/Client", function (req, res) {
+app.get("/", function (req, res) {
   res.send("Hello World");
 });
 
-app.get("/Client", function (_req, res) {
-  res.send("Helo world");
+app.get("/dogs", function (_req, res) {
+  res.send("All the dogs in the world");
 });
 
 app.get("/testimonials", async function (req, res, next) {
